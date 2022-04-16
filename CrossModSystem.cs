@@ -5,21 +5,25 @@ using System.Reflection;
 
 namespace MultipleLures
 {
-    internal class CrossModSystem : ModSystem
+    internal class CrossModSystem
     {
         internal static bool isFargowiltasLoaded;
 
         internal static void TryModifyFargowiltasLures(Projectile proj) {
-            if (!proj.TryGetGlobalProjectile(out FargoGlobalProjectile projFargo)) return;
+            FargoGlobalProjectile projFargo = proj.GetGlobalProjectile<FargoGlobalProjectile>();
+            if (projFargo == null) return;
             var targetBool = projFargo.GetType().GetField("firstTick", BindingFlags.Instance | BindingFlags.NonPublic);
             targetBool.SetValue(projFargo, false);
         }
 
-        public override void PostSetupContent() {
-            isFargowiltasLoaded = ModLoader.TryGetMod("Fargowiltas", out _);
+        public static void PostSetupContent() {
+            isFargowiltasLoaded = false;
+            if (ModLoader.GetMod("Fargowiltas") != null) {
+                isFargowiltasLoaded = true;
+            }
         }
 
-        public override void Unload() {
+        public static void Unload() {
             isFargowiltasLoaded = false;
         }
     }

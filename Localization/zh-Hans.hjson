@@ -1,8 +1,0 @@
-﻿Mods: {
-	MultipleLures: {
-		Config: {
-			Label: "多线钓鱼配置面板"
-			LuresAmount: "额外鱼线数量"
-		}
-	}
-}

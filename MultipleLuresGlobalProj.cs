@@ -1,5 +1,5 @@
-﻿using System;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
+using System;
 using Terraria;
 using Terraria.ModLoader;
 
@@ -20,7 +20,6 @@ namespace MultipleLures
                 for (float r = 0f; r <= maxR; r += increament) {
                     float finalR = r - maxR / 2f;
                     int p = Projectile.NewProjectile(
-                        player.GetProjectileSource_Item(player.HeldItem),
                         projectile.position,
                         projectile.velocity.RotatedBy(finalR),
                         projectile.type,
@@ -29,7 +28,7 @@ namespace MultipleLures
                         projectile.owner,
                         projectile.ai[0],
                         projectile.ai[1]);
-                    if (p < 1000 && Main.projectile[p] is not null) {
+                    if (p < 1000 && Main.projectile[p] != null) {
                         var proj = Main.projectile[p];
                         proj.friendly = true;
                         proj.GetGlobalProjectile<MultipleLuresGlobalProj>().firstTick = false;
@@ -41,19 +40,6 @@ namespace MultipleLures
                 projectile.active = false;
             }
             return base.PreAI(projectile);
-        }
-
-        public override void Load() {
-            On.Terraria.Projectile.NewProjectile_IEntitySource_float_float_float_float_int_int_float_int_float_float += NewProjectilePatch;
-        }
-
-        private int NewProjectilePatch(On.Terraria.Projectile.orig_NewProjectile_IEntitySource_float_float_float_float_int_int_float_int_float_float orig, Terraria.DataStructures.IEntitySource spawnSource, float X, float Y, float SpeedX, float SpeedY, int Type, int Damage, float KnockBack, int Owner, float ai0, float ai1) {
-            int i = orig.Invoke(spawnSource, X, Y, SpeedX, SpeedY, Type, Damage, KnockBack, Owner, ai0, ai1);
-            var proj = Main.projectile[i];
-            if (proj.bobber && Owner == Main.myPlayer && CrossModSystem.isFargowiltasLoaded) {
-                CrossModSystem.TryModifyFargowiltasLures(proj);
-            }
-            return i;
         }
 
         public override bool InstancePerEntity => true;
