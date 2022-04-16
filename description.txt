@@ -1,8 +1,11 @@
-You can customize the number of lures when fishing from 1 to 200
+ï»¿You can customize the number of lures when fishing from 1 to 200
 You can even choose not to cast lures, but that would be silly
 If loaded with Fargo's Mutant Mod, it will override Fargo's extra lures feature and will not stack
+Works better with Autofish Mod
 
-Äã¿ÉÒÔ×Ô¶¨ÒåµöÓãÅ×¹³Ê±Óã¹³µÄÊıÁ¿£¬´Ó1µ½200
-ÄãÉõÖÁ¿ÉÒÔÑ¡Ôñ²»Å×¹³£¬Ö»²»¹ı»áºÜ´À
-Èç¹ûÓëFargo's Mutant Mod£¨·¨¹·Í»±ä£©Ò»Æğ¼ÓÔØ£¬½«»á¸²¸ÇFargoµÄ¶îÍâÓã¹³¹¦ÄÜ£¬²»»áµş¼Ó
+ä½ å¯ä»¥è‡ªå®šä¹‰é’“é±¼æŠ›é’©æ—¶é±¼é’©çš„æ•°é‡ï¼Œä»1åˆ°200
+ä½ ç”šè‡³å¯ä»¥é€‰æ‹©ä¸æŠ›é’©ï¼Œåªä¸è¿‡ä¼šå¾ˆè ¢
+å¦‚æœä¸Fargo's Mutant Modï¼ˆæ³•ç‹—çªå˜ï¼‰ä¸€èµ·åŠ è½½ï¼Œå°†ä¼šè¦†ç›–Fargoçš„é¢å¤–é±¼é’©åŠŸèƒ½ï¼Œä¸ä¼šå åŠ 
+ä¸è‡ªåŠ¨é’“é±¼Modä¸€èµ·ä½¿ç”¨æ•ˆæœæ›´ä½³
 
+Github: https://github.com/Crapsky233/MultipleLures
