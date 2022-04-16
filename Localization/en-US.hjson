@@ -1,0 +1,8 @@
+Mods: {
+	MultipleLures: {
+		Config: {
+			Label: Multiple Lures Configuration
+			LuresAmount: "Number of extra lures"
+		}
+	}
+}

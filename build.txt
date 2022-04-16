@@ -1,0 +1,4 @@
+displayName = Multiple Lures
+author = -Cyril-
+version = 1.0
+weakReferences = Fargowiltas@2.6.2

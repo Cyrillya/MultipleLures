@@ -1,0 +1,8 @@
+You can customize the number of lures when fishing from 1 to 200
+You can even choose not to cast lures, but that would be silly
+If loaded with Fargo's Mutant Mod, it will override Fargo's extra lures feature and will not stack
+
+你可以自定义钓鱼抛钩时鱼钩的数量，从1到200
+你甚至可以选择不抛钩，只不过会很蠢
+如果与Fargo's Mutant Mod（法狗突变）一起加载，将会覆盖Fargo的额外鱼钩功能，不会叠加
+
