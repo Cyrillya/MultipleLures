@@ -20,7 +20,7 @@ namespace MultipleLures
                 for (float r = 0f; r <= maxR; r += increament) {
                     float finalR = r - maxR / 2f;
                     int p = Projectile.NewProjectile(
-                        player.GetProjectileSource_Item(player.HeldItem),
+                        player.GetSource_ItemUse(player.HeldItem),
                         projectile.position,
                         projectile.velocity.RotatedBy(finalR),
                         projectile.type,
