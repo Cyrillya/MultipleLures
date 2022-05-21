@@ -11,8 +11,11 @@ namespace MultipleLures
 
         internal static void TryModifyFargowiltasLures(Projectile proj) {
             if (!proj.TryGetGlobalProjectile(out FargoGlobalProjectile projFargo)) return;
-            var targetBool = projFargo.GetType().GetField("firstTick", BindingFlags.Instance | BindingFlags.NonPublic);
-            targetBool.SetValue(projFargo, false);
+            try {
+                var targetBool = projFargo.GetType().GetField("firstTick", BindingFlags.Instance | BindingFlags.NonPublic);
+                targetBool.SetValue(projFargo, false);
+            }
+            catch { }
         }
 
         public override void PostSetupContent() {
