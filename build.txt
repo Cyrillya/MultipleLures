@@ -1,5 +1,4 @@
 displayName = Multiple Lures
 author = -Cyril-
-version = 1.2
-weakReferences = Fargowiltas@2.8
+version = 1.3
 homepage = https://github.com/Crapsky233/MultipleLures

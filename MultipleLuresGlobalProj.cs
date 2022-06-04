@@ -30,13 +30,7 @@ namespace MultipleLures
                     if (p < 1000 && Main.projectile[p] is not null) {
                         var proj = Main.projectile[p];
                         proj.friendly = true;
-                        if (CrossModSystem.isFargowiltasLoaded) {
-                            CrossModSystem.TryModifyFargowiltasLures(proj);
-                        }
                     }
-                }
-                if (CrossModSystem.isFargowiltasLoaded) {
-                    CrossModSystem.TryModifyFargowiltasLures(projectile);
                 }
                 projectile.active = false;
             }
