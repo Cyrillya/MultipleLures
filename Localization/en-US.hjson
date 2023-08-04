@@ -1,8 +1,14 @@
 Mods: {
 	MultipleLures: {
-		Config: {
-			Label: Multiple Lures Configuration
-			LuresAmount: "Number of total lures"
+		Configs: {
+			Configuration: {
+				DisplayName: Multiple Lures Configuration
+
+				LuresAmount: {
+					Label: Number of total lures
+					Tooltip: ""
+				}
+			}
 		}
 	}
 }

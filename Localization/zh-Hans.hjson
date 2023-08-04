@@ -1,8 +1,14 @@
-﻿Mods: {
+Mods: {
 	MultipleLures: {
-		Config: {
-			Label: "多线钓鱼配置面板"
-			LuresAmount: "鱼线总数"
+		Configs: {
+			Configuration: {
+				DisplayName: 多线钓鱼配置面板
+
+				LuresAmount: {
+					Label: 鱼线总数
+					Tooltip: ""
+				}
+			}
 		}
 	}
 }
